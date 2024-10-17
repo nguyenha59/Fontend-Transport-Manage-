@@ -1,0 +1,25 @@
+.change-password-container {                  
+    display: flex;
+    justify-content: center;
+    align-items: center;                       
+}
+.change-password-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+}
+.form-group label {
+    font-weight: bold;
+}
+.alert {
+    margin-top: 20px;
+}
+.card-header {
+    background-color: #e4002b; /* Màu nền cho khung */
+    color: white; /* Màu chữ */
+    font-weight: bold; /* Chữ đậm */
+    padding: 10px; /* Padding cho khung */
+}

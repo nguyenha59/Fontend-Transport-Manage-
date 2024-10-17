@@ -1,0 +1,41 @@
+body {
+    background-color: #f8f9fa;
+}
+.header {
+    background-color: #e4002b;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+.btn-confirm {
+background-color: #28a745; /* màu xanh */
+color: white; /* màu chữ trắng */
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.btn-confirm:hover {
+background-color: #218838; /* màu xanh đậm hơn khi hover */
+}

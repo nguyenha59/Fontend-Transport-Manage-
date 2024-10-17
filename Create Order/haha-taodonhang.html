@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo đơn</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="taodonhang.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>HahaChan ShipSmart</h2>
+    </div>
+    </style>
+</head>
+<body>
+
+<div class="container order-container">
+    <h2>Tạo đơn hàng</h2>    
+
+    <!-- Thông tin người gửi -->
+    <div class="section">
+        <h4>Thông tin người gửi</h4>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="senderName">Họ và tên:</label>
+                <input type="text" class="form-control" id="senderName" required>
+            </div>
+            <div class="form-group">
+                <label for="senderPhone">Số điện thoại:</label>
+                <input type="tel" class="form-control" id="senderPhone" required>
+            </div>
+            <div class="form-group">
+                <label for="senderAddress">Địa chỉ nhận hàng:</label>
+                <input type="text" class="form-control" id="senderAddress" required>
+            </div>
+        </form>
+    </div>
+
+    <!-- Thông tin người nhận -->
+    <div class="section">
+        <h4>Thông tin người nhận</h4>
+        <form>
+            <div class="form-group">
+                <label for="recipientName">Họ và tên:</label>
+                <input type="text" class="form-control" id="recipientName" required>
+            </div>
+            <div class="form-group">
+                <label for="recipientPhone">Số điện thoại:</label>
+                <input type="tel" class="form-control" id="recipientPhone" required>
+            </div>
+            <div class="form-group">
+                <label for="recipientAddress">Địa chỉ nhận hàng:</label>
+                <input type="text" class="form-control" id="recipientAddress" required>
+            </div>
+        </form>
+    </div>
+
+    <!-- Thông tin sản phẩm -->
+    <div class="section" id="productsSection">
+        <h4>Thông tin sản phẩm</h4>
+        <div id="productFields">
+            <div class="product-info">
+                <h5>Sản phẩm 1</h5>
+                <div class="form-group">
+                    <label for="productName1">Tên sản phẩm:</label>
+                    <input type="text" class="form-control" id="productName1" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice1">Giá sản phẩm (VND):</label>
+                    <input type="number" class="form-control" id="productPrice1" required oninput="calculateTotal()">
+                </div>
+                <div class="form-group">
+                    <label for="productWeight1">Cân nặng (kg):</label>
+                    <input type="number" class="form-control" id="productWeight1" required>
+                </div>
+                <div class="form-group">
+                    <label>Chọn phân loại hàng hóa:</label>
+                    <select class="form-control" id="productType1" required>
+                        <option value="normal">Hàng thông thường</option>
+                        <option value="fragile">Hàng dễ vỡ</option>
+                        <option value="bulky">Hàng cồng kềnh</option>
+                        <option value="liquid">Chất lỏng</option>
+                        <option value="electronics">Hàng điện tử</option>
+                        <option value="highValue">Hàng giá trị cao</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-secondary" id="addProductBtn">Thêm sản phẩm</button>
+    </div>
+
+    <!-- Dịch vụ -->
+    <div class="section">
+        <h4>Dịch vụ</h4>
+        <form>
+            <div class="form-group">
+                <label for="distance">Số km:</label>
+                <input type="number" class="form-control" id="distance" required oninput="calculateShipping()">
+            </div>
+            <div class="form-group">
+                <label for="serviceType">Chọn tên dịch vụ:</label>
+                <select class="form-control" id="serviceType" required>
+                    <option value="economy">Economy</option>
+                    <option value="fast">Fast</option>
+                    <option value="express">Express</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <!-- Phương thức thanh toán -->
+    <div class="section">
+        <h4>Chọn phương thức thanh toán</h4>
+        <form>
+            <div class="form-group">
+                <label>Chọn phương thức thanh toán:</label>
+                <select class="form-control" id="paymentMethod" required>
+                    <option value="bankTransfer">Chuyển khoản ngân hàng</option>
+                    <option value="cashOnDelivery">Thanh toán khi nhận hàng</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Chọn bên thanh toán:</label>
+                <select class="form-control" id="payer" required>
+                    <option value="recipient">Người nhận</option>
+                    <option value="sender">Người gửi</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <!-- Tổng thanh toán -->
+    <div class="order-summary">
+        <h4>Tổng thanh toán</h4>
+        <p><strong>Tổng giá trị sản phẩm:</strong> <span id="totalProductValue">0 VND</span></p>
+        <p><strong>Tổng phí ship:</strong> <span id="totalShipping">0 VND</span></p>
+        <p><strong>Tổng phụ phí:</strong> <span id="totalSurcharge">0 VND</span></p>
+        <p><strong>Tổng phí thu hộ (COD):</strong> <span id="totalCOD">0 VND</span></p>
+        <p><strong>Tổng cộng:</strong> <span id="totalAmount">0 VND</span></p>
+        <button class="btn btn-confirm">Xác nhận đơn hàng</button>
+    </div>
+</div>
+
+<div class="footer text-center">
+    <p>&copy; HahaChan ShipSmart </p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="taodonhang.js"></script> 
+
+</body>
+</html>
+

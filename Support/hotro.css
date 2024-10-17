@@ -1,0 +1,36 @@
+.content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 30px auto;
+}
+.introduction {
+    margin-bottom: 30px;
+}
+.introduction h2 {
+    color: #e4002b;
+    margin-bottom: 15px;
+}
+.introduction p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+.contact-info {
+    border-top: 2px solid #e4002b;
+    padding-top: 30px;
+}
+.contact-info h2 {
+    color: #e4002b;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #333;
+}
+.contact-info p strong {
+    color: #e4002b;
+}

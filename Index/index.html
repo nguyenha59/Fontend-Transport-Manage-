@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HahaChan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="/Lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/Lib/bootstrap/dist/css/all.min.css" rel="stylesheet"> 
+    <link href="/Lib/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- Phần đầu trang -->
+        <div class="header">
+            <img src="https://image.optcdn.me/9939220b051fa10458884f6465879360-icon-giao-hang.png" alt="HahaChan Logo">
+            <div class="banner-text">
+                <h1>Giao hàng Việt</h1>
+                <h2>Tiến bước toàn cầu</h2>
+            </div>
+        </div>
+
+    <!-- Menu điều hướng -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li class="dropdown">
+                <a href="#">Hỗ trợ khách hàng</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="window.location.href='haha-hotro.html'; return false;">Thông tin liên hệ</a>
+                    <a href="#" onclick="window.location.href='haha-form.html'; return false;">Form hỗ trợ khách hàng</a>
+                </div>
+            </li>
+        </li>
+        <li class="dropdown">
+            <a href="#">Tạo đơn hàng</a>
+            <div class="dropdown-content">
+                <a href="#">Vui lòng đăng nhập</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Quản lý đơn hàng</a>
+            <div class="dropdown-content">
+                <a href="#">Vui lòng đăng nhập</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Quản lý thống kê</a>
+            <div class="dropdown-content">
+                <a href="#">Vui lòng đăng nhập</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Quản lý tài khoản</a>
+            <div class="dropdown-content">
+                <a href="#">Vui lòng đăng nhập</a>
+            </div>
+        </li>
+    </div>
+    <!-- Thanh tìm kiếm -->
+    <div class="search-login">
+        <input type="text" placeholder="Tìm kiếm">
+<!-- Nút đăng nhập -->
+<button type="button" onclick="dieu_huong1()">Đăng nhập/Đăng ký</button>
+<script>
+    function dieu_huong1() {
+        location.assign("haha-dangnhap.html");
+    }
+</script>
+    </div>
+
+          <!-- Banner-->
+          <div class="banner-container">
+            <div class="banner-slide" style="background-image: url('https://smsliveblog.wordpress.com/wp-content/uploads/2019/01/banner-how-to-build-your-business-around-a-hyperlocal-on-demand-delivery-model.png');"></div>
+            <div class="banner-slide active" style="background-image: url('https://magenest.com/wp-content/uploads/2023/10/on-demand-delivery.webp');"></div>
+            <div class="banner-slide" style="background-image: url('https://thuanthienphat.vn/wp-content/uploads/2024/05/giao-hang-shop-online.jpg');"></div>
+    
+            <!-- Navigation Dots -->
+            <div class="dot-container">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Nút tra cứu và dịch vụ -->
+    <div class="buttons">
+        <a href="#">Tra cứu</a>
+        <a href="#">Dịch vụ</a>
+    </div>
+    <div class="image-container" style="text-align: center; margin: 20px 0;">
+        <img src="https://file.hstatic.net/200000472237/file/banggianew_36302498b18a48c985b75caa9c5618f9_1024x1024.png" alt="Bảng giá dịch vụ" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="image-container" style="text-align: center; margin: 20px 0;">
+        <img src="https://daiphatvienthong.vn/upload/images/giao%20hang.jpg" alt="Bảng giá dịch vụ" style="max-width: 100%; height: auto;">
+    </div>
+    <!-- Phần thông tin cuối trang -->    
+<div class="footer-info" style="background-color: #000000d5; padding: 20px; position: relative;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        <h4>Thông tin liên hệ</h4>
+        <p><strong>Email:</strong> ha.nt225622@sis.hust.edu.vn</p>
+        <p><strong>Số điện thoại:</strong> 0983470815</p>
+        <p><strong>Địa chỉ:</strong> Trường CNTT và Truyền thông - Đại học Bách Khoa Hà Nội</p>
+    </div>
+</div>
+    <!-- Trang đăng nhập -->
+    <div class="login-container">
+        <div class="card login-card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Đăng nhập</h4>
+                <form>
+                    <div class="form-group">
+                        <label for="username">UserID:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Nhập ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary login-btn">Đăng nhập</button>
+                    <div class="login-options">
+                        <a href="#">Quên mật khẩu?</a>
+                        <a href="/register.html">Đăng ký</a>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <button class="btn btn-danger"><i class="fab fa-google"></i> Đăng nhập với Google</button>
+                    <button class="btn btn-primary"><i class="fab fa-facebook-f"></i> Đăng nhập với Facebook</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center mt-4">
+        <p>&copy; Hahachan ShipSmart.</p>
+    </div>
+
+    <!-- Bootstrap JS và các thư viện liên quan -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showLogin() {
+            document.querySelector('.login-container').style.display = 'flex';
+        }
+    </script> 
+    <script src="index2.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hỗ Trợ</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="/Lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/Lib/bootstrap/dist/css/all.min.css" rel="stylesheet"> 
+    <link href="/Lib/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- Phần đầu trang -->
+    <div class="header">
+        <img src="https://image.optcdn.me/9939220b051fa10458884f6465879360-icon-giao-hang.png" alt="HahaChan Logo">
+        <div class="banner-text">
+            <h1>Giao hàng Việt</h1>
+            <h2>Tiến bước toàn cầu</h2>
+        </div>
+    </div>
+
+    <!-- Menu điều hướng -->
+    <div class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="hahachan.html">Trang chủ</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Hỗ trợ khách hàng</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="window.location.href='haha-hotro.html'; return false;">Thông tin liên hệ</a>
+                    <a href="#" onclick="window.location.href='haha-form.html'; return false;">Form hỗ trợ khách hàng</a>
+                </div>
+            </li>
+            <li><a href="#" onclick="window.location.href='haha-taodonhang.html'; return false;">Tạo đơn hàng</a></li>
+            <li><a href="#" onclick="window.location.href='haha-dsdonhang.html'; return false;">Quản lý đơn hàng</a></li>
+            <li class="dropdown">
+                <a href="#">Quản lý thống kê</a>
+                <div class="dropdown-content">
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;" >Thống kê đơn hàng</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Tổng chi tiêu</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Tổng doanh số</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Biểu đồ</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Quản lý tài khoản</a>
+                <div class="dropdown-content">
+                    <a href="#"onclick="window.location.href='haha-taikhoan.html'; return false;" >Thông tin tài khoản</a>
+                    <a href="#"onclick="window.location.href='haha-doimatkhau.html'; return false;">Đổi mật khẩu</a>
+                    <a href="#"onclick="window.location.href='haha-suataikhoan.html'; return false;">Sửa tài khoản</a>
+                    <a href="#"onclick="window.location.href='hahachanpre.html'; return false;">Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- codemain -->
+    <div class="contact-form">
+        <h2>LIÊN HỆ NGAY VỚI HAHACHAN SMARTSHIP</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Họ tên</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mã vận đơn</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Vấn đề cần hỗ trợ</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Gửi ngay</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 HahaChan SmartShip</p>
+    </div>
+    <!-- Bootstrap JS và các thư viện liên quan -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

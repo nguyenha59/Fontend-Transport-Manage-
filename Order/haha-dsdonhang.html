@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách đơn hàng</title>
+    <link href="/Lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="/Lib/bootstrap/dist/css/all.min.css" rel="stylesheet"> 
+    <link href="/Lib/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donhang.css">
+</head>
+<body>
+    <!-- Phần đầu trang -->
+    <div class="header">
+        <img src="https://image.optcdn.me/9939220b051fa10458884f6465879360-icon-giao-hang.png" alt="HahaChan Logo">
+        <div class="banner-text">
+            <h1>Giao hàng Việt</h1>
+            <h2>Tiến bước toàn cầu</h2>
+        </div>
+    </div>
+
+    <!-- Menu điều hướng -->
+    <div class="navbar">
+        <ul>
+            <li class="dropdown">
+                <a href="hahachan.html">Trang chủ</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Hỗ trợ khách hàng</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="window.location.href='haha-hotro.html'; return false;">Thông tin liên hệ</a>
+                    <a href="#" onclick="window.location.href='haha-form.html'; return false;">Form hỗ trợ khách hàng</a>
+                </div>
+            </li>
+            <li><a href="#" onclick="window.location.href='haha-taodonhang.html'; return false;">Tạo đơn hàng</a></li>
+            <li><a href="#" onclick="window.location.href='haha-dsdonhang.html'; return false;">Quản lý đơn hàng</a></li>
+            <li class="dropdown">
+                <a href="#">Quản lý thống kê</a>
+                <div class="dropdown-content">
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;" >Thống kê đơn hàng</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Tổng chi tiêu</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Tổng doanh số</a>
+                    <a href="#"onclick="window.location.href='qltktab.html'; return false;">Biểu đồ</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Quản lý tài khoản</a>
+                <div class="dropdown-content">
+                    <a href="#"onclick="window.location.href='haha-taikhoan.html'; return false;" >Thông tin tài khoản</a>
+                    <a href="#"onclick="window.location.href='haha-doimatkhau.html'; return false;">Đổi mật khẩu</a>
+                    <a href="#"onclick="window.location.href='haha-suataikhoan.html'; return false;">Sửa tài khoản</a>
+                    <a href="#"onclick="window.location.href='hahachanpre.html'; return false;">Đăng xuất</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--maincode-->
+<!-- Danh sách đơn hàng -->
+<div class="container order-container">
+    <h2>Danh sách đơn hàng (5)</h2>
+    <table class="table order-table">
+        <thead>
+            <tr>
+                <th>Ảnh</th>
+                <th>Mã đơn hàng</th>
+                <th>Giá</th>
+                <th>Số sản phẩm</th>
+                <th>Trạng thái đơn hàng</th>
+                <th>Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://bizweb.dktcdn.net/100/343/358/files/cap-da-nang-932-den-3.jpg" alt="Product Image"></td>
+                <td>#001</td>
+                <td>326.000 VND</td>
+                <td>1</td>
+                <td>Đang xử lý</td>
+                <td><a href="haha-don1.html" class="btn-view">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://cf.shopee.vn/file/5a800e034511596919e656e1b3bc0ff8" alt="Product Image"></td>
+                <td>#002</td>
+                <td>521.000 VND</td>
+                <td>2</td>
+                <td>Đang giao hàng</td>
+                <td><a href="haha-don2.html" class="btn-view">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://cdn1.concung.com/storage/2023/03/1679908329-dsc01707.jpg" alt="Product Image"></td>
+                <td>#003</td>
+                <td>560.000 VND</td>
+                <td>1</td>
+                <td>Đang giao hàng</td>
+                <td><a href="haha-don3.html" class="btn-view">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://salt.tikicdn.com/ts/tmp/a8/bd/ea/5f8f7cf94483d61f71839a7d2aeffd23.jpg" alt="Product Image"></td>
+                <td>#004</td>
+                <td>148.000 VND</td>
+                <td>3</td>
+                <td>Đã hủy</td>
+                <td><a href="haha-don4.html" class="btn-view">Xem chi tiết</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://assets-hebela.cdn.vccloud.vn/dict/1/inisrrinrgrdasiirt20211023152842romand/nsoirinsdhasrsdrts20211025214241son-tint-juicy-lasting/rntrsnmhosngssithi2021102522525111-pink-pumpkin/assmiaonmnrsitrtmd2021111117341821109807-1.png" alt="Product Image"></td>
+                <td>#005</td>
+                <td>160.000 VND</td>
+                <td>1</td>
+                <td>Đã giao</td>
+                <td><a href="haha-don5.html" class="btn-view">Xem chi tiết</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+ <!-- Footer -->
+ <div class="footer">
+    <p>&copy; 2024 HahaChan ShipSmart</p>
+</div>
+
+    <!-- Bootstrap JS và các thư viện liên quan -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
